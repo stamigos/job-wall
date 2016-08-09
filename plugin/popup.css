@@ -1,0 +1,631 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,cyrillic);
+
+@font-face {
+  font-family: 'GothamLight';
+  src: url(fonts/Gotham-Rounded-Book.ttf);
+}
+@font-face {
+  font-family: 'GothamBold';
+  src: url(fonts/Gotham-Rounded-Bold.ttf);
+}
+
+.template {
+	display: none !important;
+}
+
+#jobufo {
+	font-family: "Open Sans";
+	background: #312b3a;
+	color: #333;
+	font-weight: 100;
+	position: fixed;
+	z-index: 2000;
+	overflow: hidden;
+	border-radius: 20px;
+
+    top: calc(50% - 345px);
+    left: calc(50% - 365px);
+	width: 730px;
+	height: 690px;
+	display: none;
+}
+
+#jobufo_back {
+	background: #312b3a;
+	opacity: 0.8;
+	z-index: 1500;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	display: none;
+}
+
+#jobufo_button {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 10000;
+	width: 135px;
+	height: 46px;
+
+	background-image: url("http://93.175.221.13/plugin/img/main_sheet.png");
+    -webkit-animation: play 3s steps(94) infinite;
+       -moz-animation: play 3s steps(94) infinite;
+        -ms-animation: play 3s steps(94) infinite;
+         -o-animation: play 3s steps(94) infinite;
+            animation: play 3s steps(94) infinite;
+}
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -12690px; }
+}
+
+
+
+
+
+#jobufo .header {
+	background: #312b3a;
+	color: white;
+	font-size: 28px;
+	font-weight: 400;
+	height: 120px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 45px;
+	font-family: "GothamLight";
+	position: relative;
+}
+#jobufo .header .close {
+	position: absolute;
+	right: 22px;
+	top: 22px;
+	cursor: pointer;
+}
+
+#jobufo .page {
+    height: calc(100% - 120px);
+	overflow: hidden;
+	font-size: 0px;
+	background: white;
+}
+
+#jobufo .menu {
+	background: #f6f4f9;
+	display: inline-block;
+	vertical-align: top;
+	width: 290px;
+	height: 100%;
+	font-size: initial;
+	box-sizing: border-box;
+	overflow: auto;
+	position: relative;
+}
+#jobufo .menu .item {
+	font-weight: 600;
+	padding: 30px 25px;
+	color: #6a5d7e;
+	font-size: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.5s;
+	padding-right: 10px;
+}
+
+#jobufo .menu .item:hover {
+	padding-left: 40px;
+	padding-right: 0px;
+}
+#jobufo .menu .item.select {
+	background: #ebe9ee;
+	border-bottom: 1px solid rgba(0,0,0,0.0);
+} 
+
+#jobufo .menu .loading {
+	position: absolute;
+	top: calc(50% - 50px);
+	left: calc(50% - 50px);
+}
+
+
+
+
+#jobufo .content {
+	background: white;
+	display: inline-block;
+	vertical-align: top;
+	width: 440px;
+	height: 100%;
+	font-size: initial;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 60px;
+}
+
+#jobufo .content .apply {
+	position: absolute;
+	font-family: "Open Sans";
+	background: #f2415f;
+	color: white;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 15px;
+	text-align: center;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	cursor: pointer;
+	transition: all 0.5s;
+	z-index: 500;
+	display: none;
+}
+#jobufo .content .apply:hover {
+	background: #ce354f;
+}
+#jobufo .content .apply .block {
+	display: none;
+    font-size: 13px;
+    margin: -15px;
+    margin-bottom: 15px;
+    background: #fecf2f;
+    color: white;
+    padding: 12px;
+    font-family: "Open Sans";
+    cursor: default;
+}
+#jobufo .content .apply .block img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+#jobufo .content .apply .block p {
+	display: none;
+	margin: 0px;
+}
+
+
+#jobufo .content .members {height: 100%;}
+#jobufo .content .member {
+	overflow: auto;
+	padding: 20px;
+    height: calc(100% - 20px);
+    color: #9f92b1;
+    display: none;
+}
+#jobufo .content .member::-webkit-scrollbar, 
+#jobufo .page::-webkit-scrollbar,
+#jobufo .page .step_login::-webkit-scrollbar,
+#jobufo .menu::-webkit-scrollbar {
+    width: 8px;
+}
+#jobufo .content .member::-webkit-scrollbar-thumb, 
+#jobufo .page::-webkit-scrollbar-thumb, 
+#jobufo .page .step_login::-webkit-scrollbar-thumb,
+#jobufo .menu::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+#jobufo .content .member .media {
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+}
+#jobufo .content .member .media:hover .slide_left,
+#jobufo .content .member .media:hover .slide_right {
+	opacity: 0.5;
+}
+#jobufo .content .member .media .slide_left {
+	z-index: 5000;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100% - 0px);
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 6px 0px 0px 6px;
+}
+#jobufo .content .member .media .slide_right {
+	z-index: 5000;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: calc(100% - 0px);
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 0px 6px 6px 0px;
+}
+#jobufo .content .member .media .slide_left:hover,
+#jobufo .content .member .media .slide_right:hover {
+	opacity: 1;
+}
+
+#jobufo .content .member .media .play {
+	position: absolute;
+	top: calc(50% - 38px);
+	left: calc(50% - 38px);
+	z-index: 300;
+	transition: transform 0.5s;
+	cursor: pointer;
+	display: none;
+}
+#jobufo .content .member .media .play:hover {
+	transform: scale(1.1);
+}
+#jobufo .content .member .media .dark {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: #312b3a;
+	opacity: 0.5;
+	z-index: 200;
+	display: none;
+}
+#jobufo .content .member .media .items {
+	font-size: 0px;
+	z-index: 100;
+}
+#jobufo .content .member .media .items img {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	display: none;
+}
+#jobufo .content .member .media .items .show {
+	display: block;
+}
+#jobufo .content .member .media .items video {
+	display: none;
+}
+
+
+#jobufo .content .member .media .slides {
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	width: 100%;
+	z-index: 1000;
+}
+#jobufo .content .member .media .slides div {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 2px;
+	background: #3e3744;
+	transition: all 0.5s;
+	cursor: pointer;
+	display: inline-block;
+	box-shadow: 0px 0px 10px black;
+}
+#jobufo .content .member .media .slides div.select {
+	background: white;
+}
+
+
+#jobufo .content .member .name {
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+	padding: 20px 0px;
+	font-size: 14px;
+	font-weight: 400;
+}
+#jobufo .content .member .name span {
+	color: #f2415f; 
+	font-size: 20px;
+	display: block;
+	font-weight: 400;
+}
+
+
+#jobufo .content .member .stats {
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+}
+#jobufo .content .member .stats div {
+    min-height: 19px;
+	border-radius: 15px;
+	font-weight: 300;
+	font-size: 14px;
+	color: white;
+	display: inline-block;
+	padding: 3px 30px;
+	padding-right: 25px;
+	position: relative;
+	max-width: 40%;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: top;
+}
+#jobufo .content .member .stats .bet {background: #15d1e7;}
+#jobufo .content .member .stats .bet_time {background: #4bbf6b;}
+#jobufo .content .member .stats div img {
+	position: absolute;
+	left: 9px;
+	width: 14px;
+	height: 17px;
+	top: 4px;
+}
+
+
+
+#jobufo .content .member .place {
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+	font-weight: 300;
+	font-size: 14px;
+}
+#jobufo .content .member .place img {
+	position: relative; 
+	top: 2px;
+	margin-right: 3px;
+}
+#jobufo .content .member .place .date {
+	float: right;
+	margin-left: 5px;
+}
+
+
+
+#jobufo .content .member .description {
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.075);
+}
+#jobufo .content .member .description b {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+#jobufo .content .member .description p {
+	margin: 0px;
+	font-size: 15px;
+}
+
+
+
+
+#jobufo .step_vacancy {
+	display: block;
+	height: 100%;
+}
+#jobufo .step_login {
+	display: none;
+	margin-top: -10px;
+	font-family: "GothamLight";
+}
+
+#jobufo .page .step_login {
+	overflow: auto;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    padding: 0px 25px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    height: calc(100% - 25px);
+    box-sizing: border-box;
+}
+#jobufo .page .step_login h2 {
+	font-size: 28px; 
+	margin: 30px;
+	color: #6a5d7e;
+}
+
+#jobufo .page .step_login .facebook {
+	margin-bottom: 60px;
+	cursor: pointer;
+	width: 100%;
+}
+#jobufo .page .step_login input {
+	display: block;
+	font-family: "Open Sans";
+	font-size: 16px;
+	border: none;
+	border-bottom: 1px solid #cdc6d5;
+	box-sizing: border-box;
+	padding: 15px 0px;
+	outline: none;
+	width: 100%;
+	position: relative;
+	color: #433b50;
+	margin-bottom: 10px;
+	z-index: 20;
+	background: rgba(255,255,255,0);
+	font-weight: 400;
+}
+#jobufo .page .step_login input + span {
+    position: relative;
+    top: -50px;
+    left: 0px;
+    color: #9f92b1;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    transition: all 0.5s;
+    z-index: 10;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+#jobufo .page .step_login input:focus + span {
+	top: -80px;
+	color: #f2415f;
+}
+#jobufo .page .step_login input + span.fix {
+	top: -80px !important;
+	color: #f2415f;
+}
+#jobufo .page .step_login a {
+	display: block;
+	font-size: 14px;
+	color: #9f92b1;
+	margin-bottom: 25px;
+    margin-top: -20px;
+	text-align: left;
+	text-decoration: none;
+	font-family: "Open Sans";
+	font-weight: 400;
+}
+#jobufo .page .step_login .login_button {
+	padding: 15px 65px;
+	color: white;
+	font-weight: 600;
+	font-family: "Open Sans";
+	font-size: 16px;
+	border-radius: 50px;
+	background: #f2415f;
+	cursor: pointer;
+	max-width: 180px;
+	margin: auto;
+	box-sizing: border-box;
+}
+#jobufo .page .step_login .bottom {
+	/*position: absolute;
+	bottom: 35px;
+	width: 100%;
+	left: 0px;
+	color: #9f92b1;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 400;*/
+    color: #9f92b1;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 45px;
+}
+#jobufo .page .step_login .bottom .sign {
+	display: inline-block;
+	color: #08b39c;
+	cursor: pointer;
+}
+
+
+
+#jobufo .step_sign {
+	text-align: center;
+	display: none;
+}
+#jobufo .step_sign h2 {
+	color: #6a5d7e;
+	font-size: 28px;
+	font-family: "GothamLight";
+	margin: 45px 0px;
+}
+#jobufo .step_sign .logo {
+	padding-bottom: 45px;
+}
+#jobufo .step_sign .download img {
+	margin: 0px 25px;
+	display: inline-block;
+}
+#jobufo .step_sign .have {
+	color: #9f92b1;
+	font-family: "Open Sans";
+	font-size: 16px;
+	text-align: center;
+	margin-top: 50px;
+	font-weight: 400;
+}
+#jobufo .step_sign .have .go_login {
+	color: #08b39c;
+	cursor: pointer;
+}
+
+
+
+#jobufo .step_apply {
+	text-align: center;
+	font-weight: 400;
+	display: none;
+}
+#jobufo .header .step_apply {
+	display: none;
+    background: #08b39c;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding-top: 20px;
+}
+#jobufo .step_apply h2 {
+	margin: 55px 0px;
+	color: #9f92b1;
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 400;
+}
+#jobufo .step_apply .more {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    background: #f2415f;
+    padding: 15px 25px;
+    border-radius: 50px;
+    width: 185px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 85px;
+    cursor: pointer;
+}
+
+
+
+/*********** MEDIA QUERY **************/
+
+@media screen and (max-height: 700px) {
+	#jobufo {
+		height: 600px;
+    	top: calc(50% - 300px);
+	}
+
+	#jobufo .page .step_login h2 {margin: 15px;}
+	#jobufo .step_login {overflow: auto;}
+	#jobufo .page .step_login .facebook {margin-bottom: 30px;}
+	#jobufo .page .step_login .bottom {margin-top: 30px;}
+
+	#jobufo .step_apply .more {margin-top: 25px;}
+}
+@media screen and (max-height: 600px) {
+	#jobufo {
+	    top: 0px;
+    	height: 100%;
+	}
+	#jobufo .step_apply h2 {margin: 45px 0px;}
+}
+
+
+
+@media screen and (max-width: 730px) {
+	#jobufo {
+		border-radius: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	#jobufo .page {
+		overflow: auto;
+	}
+	#jobufo .menu {
+		width: 100%;
+		height: initial;
+	}
+	#jobufo .content {
+		width: 100%;
+		height: initial;
+	}
+}
