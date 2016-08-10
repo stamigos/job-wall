@@ -127,7 +127,7 @@ body {
 	box-shadow: 0 0 2px #E50F0F;
 	cursor: pointer;
 }
-#search .location:not(:valid) ~ .close-icon {
+#search .input.location:not(:valid) ~ .close-icon {
 	display: none;
 }
 
