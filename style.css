@@ -150,7 +150,6 @@ body {
 	box-sizing: border-box;
 	padding: 20px;
 }
-
 #page .quote {
 	color: white;
 	font-size: 26px;
@@ -174,6 +173,22 @@ body {
     float: right;
     margin-bottom: 20px;
 }
+#page .block:nth-child(10n+2) .info .name,
+#page .block:nth-child(10n+3) .info .name,
+#page .block:nth-child(10n+5) .info .name {
+	font-size: 20px
+}
+#page .block:nth-child(10n+2) .info .about,
+#page .block:nth-child(10n+3) .info .about,
+#page .block:nth-child(10n+5) .info .about {
+	font-size: 14px
+}
+#page .block:nth-child(10n+2) .adds div,
+#page .block:nth-child(10n+3) .adds div,
+#page .block:nth-child(10n+5) .adds div {
+	font-size: 12px;
+}
+
 /*
 #page .block:nth-child(10n+2) .info,
 #page .block:nth-child(10n+3) .info,
