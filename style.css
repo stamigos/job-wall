@@ -94,9 +94,11 @@ body {
 	background: rgba(0,0,0,0.2);
 	color: white;
 }
-.close-icon {
+.input .location, .close-icon, .autofield {
 	position: relative;
 	padding: 10px;
+}
+.close-icon {
 	border:1px solid transparent;
 	background-color: transparent;
 	display: inline-block;
@@ -125,7 +127,7 @@ body {
 	box-shadow: 0 0 2px #E50F0F;
 	cursor: pointer;
 }
-#search #location:not(:valid) ~ .close-icon {
+#search .location:not(:valid) ~ .close-icon {
 	display: none;
 }
 
