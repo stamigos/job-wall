@@ -168,11 +168,11 @@ body {
 #page .block:nth-child(10n+2),
 #page .block:nth-child(10n+3),
 #page .block:nth-child(10n+5) {
-	height: 255px;
+	height: 262px;
     width: 460px;
     float: right;
-    margin-bottom: 20px;
-}
+/*    margin-bottom: 20px;
+*/}
 #page .block:nth-child(10n+2) .info .name,
 #page .block:nth-child(10n+3) .info .name,
 #page .block:nth-child(10n+5) .info .name {
@@ -193,6 +193,15 @@ body {
 #page .block:nth-child(10n+5) .adds div {
 	font-size: 12px;
 }
+#page .block:nth-child(10n+2) .quote, 
+#page .block:nth-child(10n+3) .quote, 
+#page .block:nth-child(10n+5) .quote{
+    height: 262px;
+    width: 460px;
+    float: right;
+    margin-bottom: 20px; 
+}
+
 
 /*
 #page .block:nth-child(10n+2) .info,
