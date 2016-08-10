@@ -183,6 +183,11 @@ body {
 #page .block:nth-child(10n+5) .info .about {
 	font-size: 14px
 }
+#page .block:nth-child(10n+2) .info .place,
+#page .block:nth-child(10n+3) .info .place,
+#page .block:nth-child(10n+5) .info .place {
+	font-size: 12px
+}
 #page .block:nth-child(10n+2) .adds div,
 #page .block:nth-child(10n+3) .adds div,
 #page .block:nth-child(10n+5) .adds div {
