@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
 
 
-	$("#page").mouseleave(function(){
+	$(window).blur(function(){
 		$("#page video").each(function(){
 			var video = $(this).get(0);
 			video.pause();
