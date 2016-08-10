@@ -106,25 +106,26 @@ body {
     cursor: pointer;
 }
 .close-icon:after {
-	content: "X";
-	display: block;
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	background-color: #FA9595;
-	z-index:1;
-	right: 35px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	padding: 2px;
-	border-radius: 50%;
-	text-align: center;
-	color: white;
-	font-weight: normal;
-	font-size: 12px;
-	box-shadow: 0 0 2px #E50F0F;
-	cursor: pointer;
+    content: "X";
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-color: #a092af;
+    z-index: 1;
+    right: 58px;
+    /* opacity: 0.7; */
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 2px;
+    border-radius: 50%;
+    text-align: center;
+    color: #312b3a;
+    font-weight: bolder;
+    font-size: 11px;
+    /* box-shadow: 0 0 2px #a092af; */
+    cursor: pointer;
 }
 #search .input.location:not(:valid) ~ .close-icon {
 	display: none;
