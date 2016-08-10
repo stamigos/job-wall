@@ -96,7 +96,6 @@ body {
 }
 .input .location, .close-icon, .autofield {
 	position: relative;
-	padding: 10px;
 }
 .close-icon {
 	border:1px solid transparent;
