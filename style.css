@@ -156,6 +156,7 @@ body {
 	font-family: "GothamItalic";
 	font-style: italic;
 	padding: 20px;
+	margin-bottom: 20px;
 	text-align: center;
 	padding-top: 95px;
 	background: url("img/quote.png") center no-repeat;
@@ -192,14 +193,6 @@ body {
 #page .block:nth-child(10n+3) .adds div,
 #page .block:nth-child(10n+5) .adds div {
 	font-size: 12px;
-}
-#page .block:nth-child(10n+2) .quote, 
-#page .block:nth-child(10n+3) .quote, 
-#page .block:nth-child(10n+5) .quote{
-    height: 262px;
-    width: 460px;
-    float: right;
-    margin-bottom: 20px; 
 }
 
 
