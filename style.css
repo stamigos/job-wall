@@ -75,6 +75,21 @@ body {
     box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
     padding: 6px;
 }
+#search .autofield .clear {
+	position: absolute;
+    right: 40px;
+    top: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    display: none;
+}
+#search .autofield .clear img {
+	height: 100%;
+	opacity: 0.65;
+}
+#search .autofield .clear img:hover {
+	opacity: 1;
+}
 /*
 #search .autofield .input:focus + .fields {
 	display: block;

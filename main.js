@@ -48,6 +48,7 @@ $(document).ready(function(){
 				$("#search .autofield .fields .item").click(function(){
 					var city = $(this).text();
 					$(".autofield .fields").hide();
+					$(".autofield .clear").show();
 					$(this).parent().parent().find("input").val(city);
 				});
 			}
@@ -63,6 +64,18 @@ $(document).ready(function(){
 	});
 	$(".autofield").focusout(function() {
     	$(this).find(".fields").hide();     
+    });
+
+
+	$("#search .autofield input").keyup(function(){
+		if ( $(this).val().length > 0 )
+		$(".autofield .clear").show();
+		else $(".autofield .clear").hide();
+	});
+    $("#search .autofield .clear").click(function(){
+    	$(".autofield input").val("");
+		$(".autofield .clear").hide();
+    	query();
     });
 
 
@@ -143,6 +156,8 @@ $(document).ready(function(){
 
 			if (data.benefit_1 == "") item.find(".info .adds .bonus").hide();
 			if (data.benefit_2 == "") item.find(".info .adds .vocs").hide();
+			if (data.benefit_2 == "" && data.benefit_1 == "")
+				item.find(".info .adds").remove();
 
 			// ADD VIDEO
 			if (data.video != null) {
